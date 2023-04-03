@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --main-color: hsl(218, 28%, 13%);
+    --white: hsl(0, 0%, 100%);
+    --light-red: hsl(0, 100%, 63%);
+    --testimonal-bg: hsl(219, 30%, 18%);
+    --footer-bg: hsl(216, 53%, 9%);
+    --intro-signup: hsl(217, 28%, 15%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --gray: hsl(0, 0%, 70%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .4s linear;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.4;
+    list-style-type: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background-color:  var(--main-color);
+    position: relative;
+}
+.padding_x{
+    padding-inline: 8%;
+}
+.padding_y{
+    padding-block: 5rem;
+}
+.text-center{
+    text-align: center;
+}
+.btn{
+    padding: 1rem 5rem;
+    cursor: pointer;
+    background-color: var(--cyan);
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 2rem;
+    border: 0;
+}
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-block: 2rem;
+    z-index: 1000;
+}
+nav a{
+    padding: 0 1rem;
+    font-size: 18px;
+    color: var(--gray);
+}
+nav a:hover, nav a.active{
+    color: var(--white);
+    text-decoration: underline;
+}
+.hero_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    margin-top: 60px;
+}
+.hero_content{
+    margin-top: 3rem;
+    max-width: 73rem;
+}
+.h1Text{
+    font-size: 3.3rem;
+    margin-bottom: 1rem;
+}
+.hero_content p{
+    font-size: 1.8rem;
+    padding-inline: 10rem;
+    color: var(--gray);
+    margin: 2.5rem 0;
+}
+.service_section{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    color: var(--white);
+}
+.box{
+    padding: 3rem 7rem;
+}
+.box_title{
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem 0;
+}
+p{
+    font-size: 1.7rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+.productContainer{
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    color: var(--white);
+    align-items: center;
+}
+.product_img{
+    width: 100%;
+}
+.fyloLink{
+    color: var(--gray);
+    font-size: 1.8rem;
+}
+.fyloLink:hover{
+    color: var(--cyan);
+    text-decoration: underline;
+}
+.reviewContainer{
+    background-image: url(./assets/bg-quotes.png);
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: var(--white);
+    margin-bottom: 20rem;
+}
+.review_box{
+    background-color: var(--testimonal-bg);
+    padding: 2rem;
+    border-radius: .7rem;
+}
+.review_box_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.review_box_content p{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+.review_box_content img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.signupContainer{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--intro-signup);
+    color: var(--white);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+}
+.signup{
+    margin-inline: auto;
+}
+.signup form{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+#emailLabel{
+    display: none;
+}
+.signup p{
+    max-width: 800px;
+    margin: 2rem auto 3rem;
+}
+.signup input{
+    padding: .8rem 2rem;
+    font-size: 18px;
+    border-radius: 2rem;
+    border: none;
+    width: 500px;
+    margin-right: 2rem;
+}
+.input label{
+    text-align: start;
+    padding-left: 2rem;
+    margin-top: 0.7rem;
+    color: var(--light-red);
+    font-size: 14px;
+}
+footer{
+    padding: 18rem 0 2rem 8%;
+    background-color: var(--footer-bg);
+    color: var(--white);
+}
+.footer_flex{
+    display: flex;
+    flex-direction: row;
+}
+.footer_flex i{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-right: 1rem;
+}
+.footer_content{
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr .7fr .7fr 1fr;
+    grid-gap: 1rem;
+}
+.footer_content nav a{
+    display: block;
+    margin-bottom: 1rem;
+}
+.contact div{
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: var(--gray);
+}
+.contact div i{
+    margin-right: 1rem;
+}
+.social_icons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.social_icons i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(240, 240, 240, 0.7);
+    font-size: 14px;
+    margin-inline: .5rem;
+}
+.social_icons i:hover{
+    color: var(--cyan);
+}
+
+@media screen and (max-width: 1140px) {
+    .box{
+        padding: 3rem 4rem;
+    }
+    .footer_content{
+        grid-template-columns: 2fr 2fr;
+    }
+    footer nav a{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 1340px) {
+    .signupContainer{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 992px) {
+    html{
+        font-size: 55%;
+    }
+    .padding_x{
+        padding-inline: 5%;
+    }
+    footer{
+        padding: 23rem 5% 2rem 5%;
+    }
+    .padding_all{
+        padding-block: 3rem ;
+    }
+    .hero_section img{
+        width: 80%;
+    }
+    .signup form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .signup .input{
+        margin-bottom: 2rem;
+    }
+    .input input{
+        margin-right: 0;
+    }
+    .btn{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 725px) {
+    .display{
+        display: none;
+    }
+    .hero_content p{
+        padding-inline: 3rem;
+    }
+    .signup input, .btn{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer_content{
+        grid-template-columns: 2fr;
+    }
+    .social_icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .padding_x{
+        padding-inline: 2.5%;
+    }
+    footer{
+        padding: 23rem 2.5% 2rem 2.5%;
+    }
+}
+@media screen and (max-width: 400px) {
+    html{
+        font-size: 55%;
+    }
+    .signupContainer{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 375px) {
+    nav a{
+        padding: 0 .7rem;
+    }
+    .hero_content p{
+        padding-inline: 1.5rem;
+    }
+    .service_section{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .box{
+        padding: 2rem 1rem;
+    }
+    .reviewContainer{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+
